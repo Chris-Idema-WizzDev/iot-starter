@@ -18,7 +18,7 @@ Before building there are some packages required to install on the PC. Run the f
 * Ubuntu:
 
 ```
-sudo apt-get install git wget bison gperf python python-pip python3-virtualenv python-setuptools python-serial python-click python-cryptography python-future python-pyparsing python-pyelftools ninja-build libssl-dev
+sudo apt-get install wget bison gperf python3 python3-pip python3-virtualenv python-setuptools python-cryptography python-pyparsing python-pyelftools ninja-build libssl-dev
 ```
 
 * Fedora like systems:
@@ -92,22 +92,30 @@ Next, you should activate it. This step is platform dependent:
 * For anaconda:
   ```
   conda activate ENV_NAME
+  pip install pyserial
+  pip install click
   ```
 
 * For venv:
   ```
   ENV_NAME/Scripts/activate.bat
+  pip install pyserial
+  pip install click
   ```
 
 #### Linux/ Mac OS
 * For anaconda:
   ```
   conda activate ENV_NAME
+  pip install pyserial
+  pip install click
   ```
 
 * For venv:
   ```
   source ENV_NAME/bin/activate
+  pip install pyserial
+  pip install click
   ```
 
 ## Cloning repository
@@ -115,10 +123,8 @@ Next, you should activate it. This step is platform dependent:
 To clone repository use following lines:
 
 ```bash
-git clone https://github.com/wizzdev-pl/iot-starter.git
+git clone https://github.com/wizzdev-pl/iot-starter.git --recurse-submodules
 cd iot-starter
-git submodule init
-git submodule update --init --recursive
 ```
 
 * Linux users:
