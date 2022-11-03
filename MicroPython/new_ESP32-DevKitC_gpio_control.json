@@ -1,0 +1,275 @@
+{
+    "widget": {
+    "isSystemType": true,
+    "bundleAlias": "gpio_widgets",
+    "typeAlias": "raspberry_pi_gpio_control",
+    "type": "rpc",
+    "title": "New widget",
+    "image": null,
+    "description": null,
+    "sizeX": 6,
+    "sizeY": 10.5,
+    "config": {
+        "targetDeviceAliases": [],
+        "showTitle": true,
+        "backgroundColor": "#fff",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "padding": "0px",
+        "settings": {
+        "switchPanelBackgroundColor": "#404040",
+        "gpioList": [
+            {
+                "pin": 36,
+                "label": "GPIO36",
+                "row": 2,
+                "col": 0
+            },
+            {
+                "pin": 39,
+                "label": "GPIO39",
+                "row": 3,
+                "col": 0
+            },
+            {
+                "pin": 34,
+                "label": "GPIO34",
+                "row": 4,
+                "col": 0
+            },
+            {
+                "pin": 35,
+                "label": "GPIO35",
+                "row": 5,
+                "col": 0
+            },
+            {
+                "pin": 32,
+                "label": "GPIO32",
+                "row": 6,
+                "col": 0
+            },
+            {
+                "pin": 33,
+                "label": "GPIO33",
+                "row": 7,
+                "col": 0
+            },
+            {
+                "pin": 25,
+                "label": "GPIO25",
+                "row": 8,
+                "col": 0
+            },
+            {
+                "pin": 26,
+                "label": "GPIO26",
+                "row": 9,
+                "col": 0
+            },
+            {
+                "pin": 27,
+                "label": "GPIO27",
+                "row": 10,
+                "col": 0
+            },
+            {
+                "pin": 14,
+                "label": "GPIO14",
+                "row": 11,
+                "col": 0
+            },
+            {
+                "pin": 12,
+                "label": "GPIO12",
+                "row": 12,
+                "col": 0
+            },
+            {
+                "pin": 13,
+                "label": "GPIO13",
+                "row": 14,
+                "col": 0
+            },
+            {
+                "pin": 9,
+                "label": "GPIO9",
+                "row": 15,
+                "col": 0
+            },
+            {
+                "pin": 10,
+                "label": "GPIO10",
+                "row": 16,
+                "col": 0
+            },
+            {
+                "pin": 11,
+                "label": "GPIO11",
+                "row": 17,
+                "col": 0
+            },
+
+
+            {
+                "pin": 23,
+                "label": "GPIO23",
+                "row": 2,
+                "col": 1
+            },
+            {
+                "pin": 22,
+                "label": "GPIO22",
+                "row": 3,
+                "col": 1
+            },
+            {
+                "pin": 1,
+                "label": "GPIO1",
+                "row": 4,
+                "col": 1
+            },
+            {
+                "pin": 3,
+                "label": "GPIO3",
+                "row": 5,
+                "col": 1
+            },
+            {
+                "pin": 21,
+                "label": "GPIO21",
+                "row": 6,
+                "col": 1
+            },
+            {
+                "pin": 19,
+                "label": "GPIO19",
+                "row": 7,
+                "col": 1
+            },
+            {
+                "pin": 18,
+                "label": "GPIO18",
+                "row": 8,
+                "col": 1
+            },
+            {
+                "pin": 5,
+                "label": "GPIO5",
+                "row": 9,
+                "col": 1
+            },
+            {
+                "pin": 17,
+                "label": "GPIO17",
+                "row": 10,
+                "col": 1
+            },
+            {
+                "pin": 16,
+                "label": "GPIO16",
+                "row": 11,
+                "col": 1
+            },
+            {
+                "pin": 4,
+                "label": "GPIO4",
+                "row": 12,
+                "col": 1
+            },
+            {
+                "pin": 0,
+                "label": "GPIO0",
+                "row": 13,
+                "col": 1
+            },
+            {
+                "pin": 2,
+                "label": "GPIO2",
+                "row": 14,
+                "col": 1
+            },
+            {
+                "pin": 15,
+                "label": "GPIO15",
+                "row": 15,
+                "col": 1
+            },
+            {
+                "pin": 8,
+                "label": "GPIO8",
+                "row": 16,
+                "col": 1
+            },
+            {
+                "pin": 7,
+                "label": "GPIO7",
+                "row": 17,
+                "col": 1
+            },
+            {
+                "pin": 6,
+                "label": "GPIO6",
+                "row": 18,
+                "col": 1
+            }
+        ],
+        "requestTimeout": 500,
+        "gpioStatusRequest": {
+            "method": "getGpioStatus",
+            "paramsBody": "{}"
+        },
+        "gpioStatusChangeRequest": {
+            "method": "setGpioStatus",
+            "paramsBody": "{\n   \"pin\": \"{$pin}\",\n   \"enabled\": \"{$enabled}\"\n}"
+        },
+        "parseGpioStatusFunction": "return body[pin] === true;"
+        },
+        "title": "New ESP32-DevKitC GPIO Control",
+        "datasources": [],
+        "targetDeviceAliasIds": [
+        "6bae4058-a2bb-54e4-e062-c36033da3c23"
+        ],
+        "showTitleIcon": false,
+        "titleTooltip": "",
+        "dropShadow": true,
+        "enableFullscreen": true,
+        "enableDataExport": true,
+        "widgetStyle": {},
+        "widgetCss": "",
+        "titleStyle": {
+        "fontSize": "16px",
+        "fontWeight": 400
+        },
+        "pageSize": 1024,
+        "noDataDisplayMessage": "",
+        "showLegend": false
+    },
+    "row": 0,
+    "col": 0,
+    "id": "ed7a11f2-91cd-4b68-4570-71466fd39dfd"
+    },
+    "aliasesInfo": {
+    "datasourceAliases": {},
+    "targetDeviceAliases": {
+        "0": {
+        "alias": "bob0",
+        "filter": {
+            "type": "singleEntity",
+            "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "521dda00-5ab2-11ed-9bfe-295761657fe1"
+            },
+            "resolveMultiple": false
+        }
+        }
+    }
+    },
+    "filtersInfo": {
+    "datasourceFilters": {}
+    },
+    "originalSize": {
+    "sizeX": 6,
+    "sizeY": 10
+    },
+    "originalColumns": 24
+}

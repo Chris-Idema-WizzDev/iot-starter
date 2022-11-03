@@ -10,8 +10,13 @@ ACCESS_TOKEN = '3atyg8kyEx7XctrvhfxDMVLD'
 
 
 # We assume that all GPIOs are LOW
-gpio_state = {7: False, 11: False, 12: False, 13: False, 15: False, 16: False, 18: False, 22: False, 29: False,
-              31: False, 32: False, 33: False, 35: False, 36: False, 37: False, 38: False, 40: False}
+# Raspberry pi GPIO:
+# gpio_state = {7: False, 11: False, 12: False, 13: False, 15: False, 16: False, 18: False, 22: False, 29: False,
+#               31: False, 32: False, 33: False, 35: False, 36: False, 37: False, 38: False, 40: False}
+
+# ESP32-DevKitC GPIO:
+gpio_state = {36: False, 39: False, 34: False, 35: False, 32: False, 33: False, 25: False, 26: False, 27: False, 14: False, 12: False, 13: False, 9: False, 10: False, 11: False,
+              23: False, 22: False, 1: False, 3: False, 21: False, 19: False, 18: False, 5: False, 17: False, 16: False, 4: False, 0: False, 2: False, 15: False, 8: False, 7: False, 6: False}
 
 
 def get_gpio_status():
@@ -32,6 +37,11 @@ my_client = None
 def on_server_side_rpc_request(request_id, request_body):
     global my_client
     print(request_id, request_body)
+    
+    #fix bug with RPC debug terminal in thingsboard (example: setGpioStatus "{\"pin\": 18, \"enabled\": true}"):
+    if isinstance(request_body['params'], str):
+        print(request_body['params'])
+        request_body['params'] = json.loads(request_body['params'])
     
     if request_body['method'] == 'getGpioStatus':
         # Reply with GPIO status
