@@ -46,13 +46,13 @@ def on_server_side_rpc_request(request_id, request_body):
     if request_body['method'] == 'getGpioStatus':
         # Reply with GPIO status
         my_client.send_rpc_reply(request_id, get_gpio_status())
-        pass
     elif request_body['method'] == 'setGpioStatus':
         # Update GPIO status and reply
         set_gpio_status(request_body['params']['pin'], request_body['params']['enabled'])
         my_client.send_rpc_reply(request_id, get_gpio_status())
-        pass
-    
+    elif request_body['method'] == 'moveRobot':
+        print(f"moving robot {request_body['params']}")
+        my_client.send_rpc_reply(request_id, '{"x":10,"y":20, "r": 90}')
     
 # Using board GPIO layout
 # GPIO.setmode(GPIO.BOARD)

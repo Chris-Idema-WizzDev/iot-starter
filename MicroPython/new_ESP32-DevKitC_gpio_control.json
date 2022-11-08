@@ -8,7 +8,7 @@
     "image": null,
     "description": null,
     "sizeX": 6,
-    "sizeY": 10.5,
+    "sizeY": 8,
     "config": {
         "targetDeviceAliases": [],
         "showTitle": true,
